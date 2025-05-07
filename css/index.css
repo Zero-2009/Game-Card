@@ -11,14 +11,14 @@ body {
     padding: 0px;
 }
 
-/** Main */
+/** Content Lobby*/
 .container-main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    background-image: url(../Background-Img.jpg);
+    background-image: url(../Images/Background-Lobby.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -91,3 +91,18 @@ body {
     border-color: #FF4500; 
     box-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
 }
+
+/** Content Game*/
+ .container-game {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-image: url(../Images/Background-Game.jpg);
+ }
