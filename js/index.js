@@ -12,12 +12,20 @@ ButtonGenerate.addEventListener("click", () => {
         alert("Please enter a valid number.");
         return;
     }
-    if (NumbCard <= 0) {
-        alert("Please enter a number greater than zero.");
+    if (NumbCard < 4 ) {
+        alert("Please enter a larger number")
+        return;
+    }
+    if (NumbCard > 14 ) {
+        alert("Please enter lower number")
         return;
     }
     if (!Number.isInteger(Number(NumbCard))) {
         alert("Please enter an integer number.");
+        return;
+    }
+    if (NumbCard <= 0) {
+        alert("Please enter a number greater than zero.");
         return;
     }
     if (NumbCard % 2 !== 0) {

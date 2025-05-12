@@ -93,7 +93,7 @@ body {
 }
 
 /** Content Game*/
- .container-game {
+.container-game {
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -105,4 +105,17 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     background-image: url(../Images/Background-Game.jpg);
- }
+}
+.carta { 
+    width: 150px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: black;
+}
