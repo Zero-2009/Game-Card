@@ -11,12 +11,13 @@ body {
     padding: 0px;
 }
 
-/** Content Lobby*/
+/** Contenxt Lobby*/
 .container-main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100vw;
     background-image: url(../Images/Background-Lobby.jpg);
     background-size: cover;
@@ -106,16 +107,65 @@ body {
     height: 100vh;
     background-image: url(../Images/Background-Game.jpg);
 }
-.carta { 
-    width: 150px;
-    height: 150px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+#container-game-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 12px;
+    max-width: 600px;
+    margin: auto;
+    justify-items: center;
+    padding: 10px;
+}
+.carta {
+    width: 80px;
+    height: 100px;
+    font-size: 2rem;
+    background-color: #ccc;
+    border: 2px solid #888;
     border-radius: 10px;
-    margin: 10px;
-    display: inline-flex;
+    cursor: pointer;
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    background-color: black;
+    transition: background-color 0.3s;
+}
+.card-value {
+    visibility: hidden;
+    transform: scale(0.8);
+    transition: visibility 0.3s, transform 0.3s;
+}
+.carta.revelada .card-value {
+    visibility: visible;
+    transform: scale(1);
+}
+
+/* Message of win*/
+.win-message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 2px solid #3c763d;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    animation: pop 0.4s ease;
+}
+@keyframes pop {
+    0%   { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.play-again-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #2d662d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.play-again-button:hover {
+    background-color: #245524;
 }

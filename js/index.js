@@ -16,7 +16,7 @@ ButtonGenerate.addEventListener("click", () => {
         alert("Please enter a larger number")
         return;
     }
-    if (NumbCard > 14 ) {
+    if (NumbCard > 30 ) {
         alert("Please enter lower number")
         return;
     }
