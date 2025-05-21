@@ -1,5 +1,4 @@
-import GenerateCards from "./Generate-Cards.js";
-
+import GenerateCards from "./generate-cards.js";
 function GenerateGame(a) {
     document.getElementById("Screen-Lobby").style.display = "none";
     document.getElementById("Screen-Game").style.display  = "flex";
@@ -12,9 +11,11 @@ function GenerateGame(a) {
 
     cards.forEach(function(value) {
         const btn = document.createElement("button");
-        btn.className = "carta";
+        //* Create a class of button
+        btn.className = "card";
         btn.innerHTML = `<span class="card-value">${value}</span>`;
         btn.value = value;
+        //* Function to click the button 
         btn.onclick = function() {
             if (openCards.length === 2 || btn.classList.contains("revelada")) {
               return;
@@ -43,8 +44,8 @@ function GenerateGame(a) {
     });
 }
 function checkWin() {
-  const totalCards = document.querySelectorAll(".carta");
-  const matchedCards = document.querySelectorAll(".carta.correcta");
+  const totalCards = document.querySelectorAll(".card");
+  const matchedCards = document.querySelectorAll(".card.correcta");
   if (matchedCards.length === totalCards.length) {
     const winMessage = document.getElementById("win-message");
     const playAgainBtn = document.getElementById("play-again-button");
@@ -58,6 +59,4 @@ function checkWin() {
     }, 300);
   }
 }
-
-
 export default GenerateGame;

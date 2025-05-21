@@ -11,8 +11,8 @@ body {
     padding: 0px;
 }
 
-/** Contenxt Lobby*/
-.container-main{
+/** Content Lobby*/
+.container-lobby {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,7 +107,45 @@ body {
     height: 100vh;
     background-image: url(../Images/Background-Game.jpg);
 }
-#container-game-cards {
+.container-game-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    margin-top: 20px;
+}
+.container-game-options__timer span {
+    font-size: 3rem;
+    color: #FFD700;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6);
+}
+.container-game-options__return button {
+    padding: 12px 25px;
+    font-size: 1.6rem;
+    background-color: #222;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.container-game-options__return button:hover {
+    background-color: #333;
+    border-color: #FF4500;
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
+    color: #FFF;
+}
+.container-game-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 12px;
@@ -116,7 +154,7 @@ body {
     justify-items: center;
     padding: 10px;
 }
-.carta {
+.card {
     width: 80px;
     height: 100px;
     font-size: 2rem;
@@ -134,12 +172,12 @@ body {
     transform: scale(0.8);
     transition: visibility 0.3s, transform 0.3s;
 }
-.carta.revelada .card-value {
+.card.revelada .card-value {
     visibility: visible;
     transform: scale(1);
 }
 
-/* Message of win*/
+/** Message of win*/
 .win-message {
     margin-top: 20px;
     padding: 15px;
@@ -165,7 +203,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-
 .play-again-button:hover {
     background-color: #245524;
 }

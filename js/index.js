@@ -1,6 +1,5 @@
-import GenerateGame from "./Generate-Game.js"
+import GenerateGame from "./generate-game.js";
 const ButtonGenerate = document.getElementById("generate-button");
-
 ButtonGenerate.addEventListener("click", () => {
     const NumberOfCards = document.getElementById("input-number").value;
     const NumbCard = parseInt(NumberOfCards, 10);
@@ -32,6 +31,5 @@ ButtonGenerate.addEventListener("click", () => {
         alert("Please enter an even number.");
         return;
     }
-
     GenerateGame(NumbCard);
 })

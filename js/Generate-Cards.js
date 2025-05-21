@@ -6,5 +6,4 @@ function GenerateCards(count) {
     cards.sort(() => Math.random() - 0.5);
     return cards;
 }
-
 export default GenerateCards;

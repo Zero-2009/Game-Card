@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>Game of Memory</title>
 </head>
 <body>
-    <section id="Screen-Lobby" class="container-main">
+    <section id="Screen-Lobby" class="container-lobby">
         <div class="input-parameters">
             <p class="input-paragraft">Count of cards</p>
             <input class="input-number" id="input-number" type="number">
             <button class="generate-button" id="generate-button">Generate</button>
         </div>
     </section>
-    <section class="container-game" id="Screen-Game">
+    <section id="Screen-Game" class="container-game">
         <main class="container-game-options">
-            
+            <div class="container-game-options__timer">
+                <span>6:00</span>
+            </div>
+            <div class="container-game-options__return">
+                <button>Return to lobby</button>
+            </div>
         </main>
-        <div id="container-game-cards"></div>
+        <div id="container-game-cards" class="container-game-cards">
+            <!-- Display for the cards in gameplay-->
+        </div>
         <div id="win-message" style="display: none;" class="win-message">
-            🎉 ¡Congratulations! You won the game.
+            🎉¡Congratulations! You won the game.
             <br>
             <button id="play-again-button" class="play-again-button">Jugar de nuevo</button>
         </div>
